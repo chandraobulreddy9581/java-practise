@@ -1,0 +1,252 @@
+class and object exam
+========================
+public class person {
+    string name;
+    int age;
+    public person(string name,int age) {
+        this.name = name;
+        this.age = age;
+        public void displayinfo() {
+            system.out.println("name"+name);
+            system.out.println("age"+age);
+            public class person {
+                public static void main(string[]args) {
+                    person = person1 = new person("chandra",22);
+                    person = person2 = new person("obul",25);
+                    system.out.println("person1:");
+                    person1.displayinfo();
+                    system.out.println("\nperson2 :");
+                    person2.displayinfo();
+                }
+            }
+        }
+    }
+}
+
+caluculator program
+====================
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to Simple Calculator");
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+
+        System.out.print("Enter the operator : ");
+        char operator = scanner.next().charAt(0);
+
+        double result = 0;
+
+        if (operator == '+') {
+            result = num1 + num2;
+        } else if (operator == '-') {
+            result = num1 - num2;
+        } else if (operator == '*') {
+            result = num1 * num2;
+        } else if (operator == '/') {
+            if (num2 != 0) {
+                result = num1 / num2;
+            } else {
+                System.out.println("Cannot divide by zero!");
+                return;
+            }
+        } else {
+            System.out.println("Invalid operator!");
+            return;
+        }
+
+        System.out.println("Result: " + result);
+
+        scanner.close();
+    }
+}
+
+class and object using for employee and salary
+==============================================
+
+public class Main {
+     int employeeID;
+     String name;
+     String position;
+     double monthlySalary;
+
+    // this is constructor
+    public Main(int employeeID, String name, String position, double monthlySalary) {
+        this.employeeID = employeeID;
+        this.name = name;
+        this.position = position;
+        this.monthlySalary = monthlySalary;
+    }
+
+    // using method
+    public double calculateYearlySalary() {
+        return monthlySalary * 12; 
+    }
+
+    
+    public void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public double getMonthlySalary() {
+        return monthlySalary;
+    }
+
+    public void setMonthlySalary(double monthlySalary) {
+        this.monthlySalary = monthlySalary;
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        // Creating an Employee object
+    Main emp = new Main(101, "chandra", "Manager", 5000.00);
+
+        // salary caluculae 
+        double yearlySalary = emp.calculateYearlySalary();
+        System.out.println("Yearly employee Salary for " + emp.getName() + emp.getPosition() + ": $" + yearlySalary);
+    }
+}
+
+natural numbers printing
+========================
+public class PrintNumbers {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+
+some of even numbers using forlopp and print 1 to 100 and sum
+==============================================================
+public class Main
+{
+	public static void main(String[] args) {
+	    int sum = 0;
+	    for(int i =1;i<=10;i++) {
+	        if(i%2==0) {
+	            sum  = sum + i;
+	            System.out.println("the sum of even numbelnra from 1 to 100 :" +sum);
+	        }
+	    }
+	}
+	    
+}
+odd even number
+===================
+public class Main
+public ststic void main(string(string[]args){
+int number = 8;
+if(number %2==0) {
+system.out.println("this is eeven number");
+} else {
+system.out.println("this is odd");
+}
+}
+
+factorial number
+==================
+
+public class Main
+{
+	public static void main(String[] args) {
+	     int num = 5;
+        int fact = 1;
+        for(int i =1;i<=num;i++) {
+            fact = fact * i;
+        }
+		System.out.println("fact :"+fact);
+	}
+}
+
+oops concept
+================
+package.com .mypackage.oops concept
+public class test class {
+int age ;
+string name;
+public void get detailes(int age ,string name) {
+this.age = age;
+this.name = name;
+system.out.println("emp nameis : + name + "\n" "emp age is : "age);
+public static void main (string[]args) {
+test class tc = new test class();
+tc.get detailes(25,"obi");
+}
+}
+
+leap year or not
+=====================
+
+import java.util.Scanner;
+
+public class LeapYear {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a year:");
+        int year = scanner.nextInt();
+
+        // condition
+        boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+        if (isLeapYear) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+
+        scanner.close();
+    }
+}
+
+prime numbers print 1 to 100
+=================================
+
+
+public class PrimeNumbers {
+    public static void main(String[] args) {
+        int limit = 100;
+
+        System.out.println("Prime numbers between 1 and " + limit + " are");
+        
+        for (int i = 2; i <= limit; i++) {
+            boolean isPrime = true;
+            
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            
+            if (isPrime) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+
+
